@@ -16,7 +16,7 @@ export default function PaginationTable({ apiUrl }) {
   const [selectedItem, setSelectedItem] = useState(null);
   const [operation, setOperation] = useState(null);
   const tableBodyRef = useRef(null);
-
+console.log(apiUrl)
   useEffect(() => {
     const fetchData = async () => {
       const token = localStorage.getItem('token');

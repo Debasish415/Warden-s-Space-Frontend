@@ -20,8 +20,9 @@ function Signup() {
       alert("Passwords do not match");
       return;
     }
+    // `${import.meta.env.VITE_BACKEND_URL}/api/register`
     try {
-      const response = await axios.post('http://localhost:5000/api/register', { email, password });
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/register`, { email, password });
       localStorage.setItem('token', response.data.token);
       // Redirect to a protected route
       window.location.href = "/login";

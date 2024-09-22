@@ -9,11 +9,11 @@ function Login() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const formRef = useRef(null);
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/login', { email, password });
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/login`, { email, password });
       localStorage.setItem('token', response.data.token);
       // Redirect to a protected route
       window.location.href = "/";
