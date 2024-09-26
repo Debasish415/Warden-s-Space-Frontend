@@ -25,7 +25,7 @@ function Signup() {
       const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/register`, { email, password });
       localStorage.setItem('token', response.data.token);
       // Redirect to a protected route
-      window.location.href = "/login";
+      window.location.href = "/";
     } catch (error) {
       console.error('Error signing up', error);
     }
