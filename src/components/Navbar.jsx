@@ -46,6 +46,48 @@ function Navbar() {
           <li>Monday</li>
         </NavLink>
         {/* More days here */}
+        <NavLink
+          to="/tuesday"
+          className="block py-2 px-4 hover:bg-black transition duration-200"
+          ref={(el) => navItems.current[2] = el}
+        >
+          <li>Tuesday</li>
+        </NavLink>
+        <NavLink
+          to="/wednesday"
+          className="block py-2 px-4 hover:bg-black transition duration-200"
+          ref={(el) => navItems.current[2] = el}
+        >
+          <li>Wednesday</li>
+        </NavLink>
+        <NavLink
+          to="/thursday"
+          className="block py-2 px-4 hover:bg-black transition duration-200"
+          ref={(el) => navItems.current[2] = el}
+        >
+          <li>Thursday</li>
+        </NavLink>
+        <NavLink
+          to="/friday"
+          className="block py-2 px-4 hover:bg-black transition duration-200"
+          ref={(el) => navItems.current[2] = el}
+        >
+          <li>Friday</li>
+        </NavLink>
+        <NavLink
+          to="/saturday"
+          className="block py-2 px-4 hover:bg-black transition duration-200"
+          ref={(el) => navItems.current[2] = el}
+        >
+          <li>Saturday</li>
+        </NavLink>
+        <NavLink
+          to="/sunday"
+          className="block py-2 px-4 hover:bg-black transition duration-200"
+          ref={(el) => navItems.current[2] = el}
+        >
+          <li>Sunday</li>
+        </NavLink>
       </>
     ) : (
       <>
