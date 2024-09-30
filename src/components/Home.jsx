@@ -63,28 +63,51 @@ function Home() {
       </div>
 
       {/* Footer Section */}
-      <footer className="footer">
-        <div className="footer-content">
-          <img src="/images/myphoto.jpg" alt="Debasish Maharana" className="creator-photo" />
-          <div className="creator-info">
-            <p className="footer-text">Created by Debasish Maharana</p>
-            <p className="footer-text">© 2024 Warden's Space. All rights reserved.</p>
-          </div>
+<footer className="footer bg-gray-900 text-white py-8">
+  <div className="footer-content container mx-auto flex flex-col items-center">
 
-          {/* Social Icons */}
-          <div className="social-icons">
-            <a href="https://www.linkedin.com/in/debasish-maharana-a90872218/" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin />
-            </a>
-            <a href="https://x.com/Debasis00236812" target="_blank" rel="noopener noreferrer">
-              <FaTwitter />
-            </a>
-            <a href="mailto:debasishmaharana28@gmail.com">
-              <FaEnvelope />
-            </a>
-          </div>
-        </div>
-      </footer>
+    {/* Creator Photo and Info */}
+    <div className="flex flex-col items-center space-y-4">
+      <img 
+        src="/images/myphoto.jpg" 
+        alt="Debasish Maharana" 
+        className="creator-photo rounded-full w-20 h-20 object-cover border-4 border-gray-700 shadow-lg"
+      />
+      <div className="creator-info text-center">
+        <p className="footer-text font-bold text-lg">Created by Debasish Maharana</p>
+        <p className="footer-text text-sm text-gray-400">© 2024 Warden's Space. All rights reserved.</p>
+      </div>
+    </div>
+
+    {/* Social Icons */}
+    <div className="social-icons flex space-x-6 mt-6">
+      <a 
+        href="https://www.linkedin.com/in/debasish-maharana-a90872218/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-gray-400 hover:text-blue-500 transition duration-300"
+      >
+        <FaLinkedin size={24} />
+      </a>
+      <a 
+        href="https://x.com/Debasis00236812" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-gray-400 hover:text-blue-400 transition duration-300"
+      >
+        <FaTwitter size={24} />
+      </a>
+      <a 
+        href="mailto:debasishmaharana28@gmail.com"
+        className="text-gray-400 hover:text-red-500 transition duration-300"
+      >
+        <FaEnvelope size={24} />
+      </a>
+    </div>
+  </div>
+</footer>
+
+
     </div>
   );
 }
