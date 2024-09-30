@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa'; // Importing icons
 import Navigation from './Navigation';
 import './Home.css';
 import gsap from 'gsap';
@@ -60,6 +61,30 @@ function Home() {
           </div>
         </div>
       </div>
+
+      {/* Footer Section */}
+      <footer className="footer">
+        <div className="footer-content">
+          <img src="/images/myphoto.jpg" alt="Debasish Maharana" className="creator-photo" />
+          <div className="creator-info">
+            <p className="footer-text">Created by Debasish Maharana</p>
+            <p className="footer-text">© 2024 Warden's Space. All rights reserved.</p>
+          </div>
+
+          {/* Social Icons */}
+          <div className="social-icons">
+            <a href="https://www.linkedin.com/in/debasish-maharana-a90872218/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
+            <a href="https://x.com/Debasis00236812" target="_blank" rel="noopener noreferrer">
+              <FaTwitter />
+            </a>
+            <a href="mailto:debasishmaharana28@gmail.com">
+              <FaEnvelope />
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
