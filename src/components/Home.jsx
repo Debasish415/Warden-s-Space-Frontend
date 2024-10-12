@@ -7,12 +7,14 @@ import gsap from 'gsap';
 
 function Home() {
   useEffect(() => {
-    gsap.fromTo('.hero-overlay', 
+    gsap.fromTo(
+      '.hero-overlay',
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 1.5, ease: 'power2.out' }
     );
 
-    gsap.fromTo('.relative.z-10', 
+    gsap.fromTo(
+      '.relative.z-10',
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 1.5, delay: 0.5, ease: 'power2.out' }
     );
@@ -32,10 +34,12 @@ function Home() {
                     <span className="block xl:inline">Warden's Space</span>
                   </h1>
                   <p className="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                    Efficiently manage hostel operations and student information with our comprehensive system.
+                    Efficiently manage hostel operations and student information
+                    with our comprehensive system.
                   </p>
                   <p className="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                    Stay organized and ensure a smooth experience for both the warden and students.
+                    Stay organized and ensure a smooth experience for both the
+                    warden and students.
                   </p>
                   <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <div className="rounded-md shadow-lg">
@@ -62,136 +66,130 @@ function Home() {
         </div>
       </div>
 
-      {/* Footer Section */} 
-<footer className="footer bg-gray-900 text-white py-8">
-  <div className="footer-content container mx-auto flex flex-col items-center">
+      {/* Footer Section */}
+      <footer className="footer bg-gray-900 text-white py-8">
+        <div className="footer-content container mx-auto flex flex-col items-center">
+          {/* Creators Section */}
+          <div className="creators-section flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-12">
+            {/* Creator 1 */}
+            <div className="flex flex-col items-center space-y-4">
+              <img
+                src="/images/myphoto.jpg"
+                alt="Debasish Maharana"
+                className="creator-photo rounded-full w-20 h-20 object-cover border-4 border-gray-700 shadow-lg"
+              />
+              <div className="creator-info text-center">
+                <p className="footer-text font-bold text-lg">
+                  Created by Debasish Maharana
+                </p>
+                <p className="footer-text text-sm text-gray-400">
+                  © 2024 Warden's Space. All rights reserved.
+                </p>
+              </div>
+              {/* Social Icons for Creator 1 */}
+              <div className="social-icons flex space-x-6">
+                <a
+                  href="https://www.linkedin.com/in/debasish-maharana-a90872218/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-500 transition duration-300"
+                >
+                  <FaLinkedin size={24} />
+                </a>
+                <a
+                  href="https://x.com/Debasis00236812"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-400 transition duration-300"
+                >
+                  <FaTwitter size={24} />
+                </a>
+                <a
+                  href="mailto:debasishmaharana28@gmail.com"
+                  className="text-gray-400 hover:text-red-500 transition duration-300"
+                >
+                  <FaEnvelope size={24} />
+                </a>
+              </div>
+            </div>
 
-    {/* Creators Section */}
-    <div className="creators-section flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-12">
-    
-      {/* Creator 1 */}
-      <div className="flex flex-col items-center space-y-4">
-        <img 
-          src="/images/myphoto.jpg" 
-          alt="Debasish Maharana" 
-          className="creator-photo rounded-full w-20 h-20 object-cover border-4 border-gray-700 shadow-lg"
-        />
-        <div className="creator-info text-center">
-          <p className="footer-text font-bold text-lg">Created by Debasish Maharana</p>
-          <p className="footer-text text-sm text-gray-400">© 2024 Warden's Space. All rights reserved.</p>
+            {/* Commented Out Creators 2 and 3 */}
+            {/*
+            <div className="flex flex-col items-center space-y-4">
+              <img 
+                src="/images/tej.jpg" 
+                alt="Creator 2" 
+                className="creator-photo rounded-full w-20 h-20 object-cover border-4 border-gray-700 shadow-lg"
+              />
+              <div className="creator-info text-center">
+                <p className="footer-text font-bold text-lg">Created by Tejeswar Maharana</p>
+                <p className="footer-text text-sm text-gray-400">© 2024 Warden's Space. All rights reserved.</p>
+              </div>
+              <div className="social-icons flex space-x-6">
+                <a 
+                  href="https://www.linkedin.com/in/creator2" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-500 transition duration-300"
+                >
+                  <FaLinkedin size={24} />
+                </a>
+                <a 
+                  href="https://x.com/creator2" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-400 transition duration-300"
+                >
+                  <FaTwitter size={24} />
+                </a>
+                <a 
+                  href="mailto:creator2@example.com"
+                  className="text-gray-400 hover:text-red-500 transition duration-300"
+                >
+                  <FaEnvelope size={24} />
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-4">
+              <img 
+                src="/images/rahul.jpg" 
+                alt="Creator 3" 
+                className="creator-photo rounded-full w-20 h-20 object-cover border-4 border-gray-700 shadow-lg"
+              />
+              <div className="creator-info text-center">
+                <p className="footer-text font-bold text-lg">Created by Rahul Mahato</p>
+                <p className="footer-text text-sm text-gray-400">© 2024 Warden's Space. All rights reserved.</p>
+              </div>
+              <div className="social-icons flex space-x-6">
+                <a 
+                  href="https://www.linkedin.com/in/creator3" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-500 transition duration-300"
+                >
+                  <FaLinkedin size={24} />
+                </a>
+                <a 
+                  href="https://x.com/creator3" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-400 transition duration-300"
+                >
+                  <FaTwitter size={24} />
+                </a>
+                <a 
+                  href="mailto:creator3@example.com"
+                  className="text-gray-400 hover:text-red-500 transition duration-300"
+                >
+                  <FaEnvelope size={24} />
+                </a>
+              </div>
+            </div>
+            */}
+          </div>
         </div>
-        {/* Social Icons for Creator 1 */}
-        <div className="social-icons flex space-x-6">
-          <a 
-            href="https://www.linkedin.com/in/debasish-maharana-a90872218/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-500 transition duration-300"
-          >
-            <FaLinkedin size={24} />
-          </a>
-          <a 
-            href="https://x.com/Debasis00236812" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-400 transition duration-300"
-          >
-            <FaTwitter size={24} />
-          </a>
-          <a 
-            href="mailto:debasishmaharana28@gmail.com"
-            className="text-gray-400 hover:text-red-500 transition duration-300"
-          >
-            <FaEnvelope size={24} />
-          </a>
-        </div>
-      </div>
-
-      {/* Creator 2 */}
-      <div className="flex flex-col items-center space-y-4">
-        <img 
-          src="/images/tej.jpg" 
-          alt="Creator 2" 
-          className="creator-photo rounded-full w-20 h-20 object-cover border-4 border-gray-700 shadow-lg"
-        />
-        <div className="creator-info text-center">
-          <p className="footer-text font-bold text-lg">Created by Tejeswar Maharana</p>
-          <p className="footer-text text-sm text-gray-400">© 2024 Warden's Space. All rights reserved.</p>
-        </div>
-        {/* Social Icons for Creator 2 */}
-        <div className="social-icons flex space-x-6">
-          <a 
-            href="https://www.linkedin.com/in/creator2" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-500 transition duration-300"
-          >
-            <FaLinkedin size={24} />
-          </a>
-          <a 
-            href="https://x.com/creator2" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-400 transition duration-300"
-          >
-            <FaTwitter size={24} />
-          </a>
-          <a 
-            href="mailto:creator2@example.com"
-            className="text-gray-400 hover:text-red-500 transition duration-300"
-          >
-            <FaEnvelope size={24} />
-          </a>
-        </div>
-      </div>
-
-      {/* Creator 3 */}
-      <div className="flex flex-col items-center space-y-4">
-        <img 
-          src="/images/creator3.jpg" 
-          alt="Creator 3" 
-          className="creator-photo rounded-full w-20 h-20 object-cover border-4 border-gray-700 shadow-lg"
-        />
-        <div className="creator-info text-center">
-          <p className="footer-text font-bold text-lg">Created by Amlan Jyoti</p>
-          <p className="footer-text text-sm text-gray-400">© 2024 Warden's Space. All rights reserved.</p>
-        </div>
-        {/* Social Icons for Creator 3 */}
-        <div className="social-icons flex space-x-6">
-          <a 
-            href="https://www.linkedin.com/in/creator3" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-500 transition duration-300"
-          >
-            <FaLinkedin size={24} />
-          </a>
-          <a 
-            href="https://x.com/creator3" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-blue-400 transition duration-300"
-          >
-            <FaTwitter size={24} />
-          </a>
-          <a 
-            href="mailto:creator3@example.com"
-            className="text-gray-400 hover:text-red-500 transition duration-300"
-          >
-            <FaEnvelope size={24} />
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</footer>
-
-
-
-
-
+      </footer>
     </div>
   );
 }
